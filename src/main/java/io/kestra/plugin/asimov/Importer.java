@@ -71,7 +71,7 @@ public class Importer extends Task implements RunnableTask<Importer.Output> {
 
         int exitCode = process.waitFor();
         if (exitCode != 0) {
-            throw new RuntimeException("ASIMOV importer failed with exit code: " + exitCode);
+            throw new RuntimeException("ASIMOV importer failed with exit code: " + exitCode + ". Output: " + outputBuilder.toString().trim());
         }
 
         return Output.builder()
