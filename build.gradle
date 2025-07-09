@@ -57,7 +57,6 @@ dependencies {
  **********************************************************************************************************************/
 test {
     useJUnitPlatform()
-    outputs.upToDateWhen { false }
 }
 
 testlogger {
@@ -65,7 +64,7 @@ testlogger {
     showExceptions = true
     showFullStackTraces = true
     showStandardStreams = true
-    showPassedStandardStreams = true
+    showPassedStandardStreams = false
     showSkippedStandardStreams = true
 }
 
